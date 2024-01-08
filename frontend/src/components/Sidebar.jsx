@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "./NavItem";
 import DynamicIconRenderer from "../utils/DynamicIconRenderer";
+import NishyanIcon from "../assets/NishyanIcon";
 export default function Sidebar() {
   const NavItems = [
     "Home",
@@ -22,7 +23,9 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sh-logo"></div>
+        <div className="sh-logo">
+            <DynamicIconRenderer itemName={"Nishyan"}/>
+        </div>
         <div className="sh-store">
           <div className="sh-store-name">Nishyan</div>
           <a className="sh-store-link" href="#">

@@ -14,7 +14,7 @@ import ProductsIcon from "../assets/ProductsIcon";
 import ToolsIcon from "../assets/ToolsIcon";
 import VendorsIcon from "../assets/VendorsIcon";
 import CreditsIcon from "../assets/CreditsIcon"
-
+import NishyanIcon from "../assets/NishyanIcon"
 const iconMap = {
   Affiliates: AffiliatesIcon,
   Analytics: AnalyticsIcon,
@@ -32,6 +32,7 @@ const iconMap = {
   Products: ProductsIcon,
   Tools: ToolsIcon,
   Vendors: VendorsIcon,
+  Nishyan:NishyanIcon
 };
 
 export default iconMap;
