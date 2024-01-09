@@ -1,6 +1,6 @@
 import Payouts from "../pages/Payouts";
 const pageMap = {
-    Payouts:Payouts
+  Payouts: Payouts,
 };
 
 export default pageMap;

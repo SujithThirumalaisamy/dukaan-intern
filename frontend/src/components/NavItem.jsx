@@ -21,7 +21,13 @@ export default function NavItem({ Item, isSelected, toggleSelect }) {
       <div className="nav-item-children">
         {isSelected && children
           ? children.map((child) => {
-              return <NavChild name={child.item} notificationCount={child.notificationCount} isSelected={child.isSelected}/>;
+              return (
+                <NavChild
+                  name={child.item}
+                  notificationCount={child.notificationCount}
+                  isSelected={child.isSelected}
+                />
+              );
             })
           : ""}
       </div>

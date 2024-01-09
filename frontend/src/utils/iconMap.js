@@ -13,34 +13,39 @@ import PluginsIcon from "../assets/PluginsIcon";
 import ProductsIcon from "../assets/ProductsIcon";
 import ToolsIcon from "../assets/ToolsIcon";
 import VendorsIcon from "../assets/VendorsIcon";
-import CreditsIcon from "../assets/CreditsIcon"
-import NishyanIcon from "../assets/NishyanIcon"
-import AnnouncementIcon from "../assets/AnnouncementIcon"
+import CreditsIcon from "../assets/CreditsIcon";
+import NishyanIcon from "../assets/NishyanIcon";
+import AnnouncementIcon from "../assets/AnnouncementIcon";
 import DropDownTriangleIcon from "../assets/DropDownTriangleIcon";
-import QuestionIcon from "../assets/QuestionIcon"
+import QuestionIcon from "../assets/QuestionIcon";
 import SearchIcon from "../assets/SearchIcon";
+import SortIcon from "../assets/SortIcon";
+import InfoIcon from "../assets/InfoIcon";
+
 const iconMap = {
   Affiliates: AffiliatesIcon,
   Analytics: AnalyticsIcon,
   Appearance: AppearanceIcon,
   Audience: AudienceIcon,
-  Announcement:AnnouncementIcon,
+  Announcement: AnnouncementIcon,
   Credits: CreditsIcon,
   Delivery: DeliveryIcon,
   Discounts: DiscountsIcon,
   DropDown: DropDownIcon,
-  DropDownTriangle:DropDownTriangleIcon,
+  DropDownTriangle: DropDownTriangleIcon,
   Home: HomeIcon,
   Marketing: MarketingIcon,
   Orders: OrdersIcon,
   Payouts: PayoutsIcon,
   Plugins: PluginsIcon,
   Products: ProductsIcon,
-  Question:QuestionIcon,
+  Question: QuestionIcon,
   Tools: ToolsIcon,
   Vendors: VendorsIcon,
-  Nishyan:NishyanIcon,
-  Search:SearchIcon,
+  Nishyan: NishyanIcon,
+  Search: SearchIcon,
+  Sort: SortIcon,
+  Info: InfoIcon,
 };
 
 export default iconMap;

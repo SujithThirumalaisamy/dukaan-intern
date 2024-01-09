@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavItem from "./NavItem";
 import DynamicIconRenderer from "../utils/DynamicIconRenderer";
-export default function Sidebar({selectedNav, setSelectedNav}) {
+export default function Sidebar({ selectedNav, setSelectedNav }) {
   const NavItems = [
     {
       item: "Home",

@@ -1,6 +1,6 @@
 import iconMap from "./iconMap";
 
-const DynamicIconRenderer = ({itemName}) => {
+const DynamicIconRenderer = ({ itemName }) => {
   if (iconMap[itemName]) {
     const IconComponent = iconMap[itemName];
     return <IconComponent />;
