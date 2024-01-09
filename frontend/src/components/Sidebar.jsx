@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "./NavItem";
 import DynamicIconRenderer from "../utils/DynamicIconRenderer";
-import NishyanIcon from "../assets/NishyanIcon";
-export default function Sidebar() {
+export default function Sidebar({selectedNav, setSelectedNav}) {
   const NavItems = [
     {
       item: "Home",
@@ -125,7 +122,6 @@ export default function Sidebar() {
       children: [],
     },
   ];
-  const [selectedNav, setSelectedNav] = useState("Home");
   return (
     <div className="sidebar">
       <div className="sidebar-header">

@@ -1,5 +1,12 @@
-.sidebar{
-  background-color:#1e2640 ;
+.layout {
+  display: flex;
+}
+.right {
+}
+.left {
+}
+.sidebar {
+  background-color: #1e2640;
   width: 15vw;
   height: 100vh;
   padding: 8px;
@@ -8,7 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.sidebar-header{
+.sidebar-header {
   width: 100%;
   padding: 1px 8px;
   display: flex;
@@ -17,38 +24,38 @@
   gap: 12px;
   margin-bottom: 16px;
 }
-.sh-logo{
+.sh-logo {
   width: 40px;
   height: 40px;
   background-color: #fff;
   border-radius: 4px;
-  margin-right:0.5px;
+  margin-right: 0.5px;
 }
-.sh-store{
+.sh-store {
   height: 42px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content:space-between ;
+  justify-content: space-between;
 }
-.sh-store-name{
+.sh-store-name {
   width: 170px;
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
 }
-.sh-store-link{
+.sh-store-link {
   width: 170px;
   font-size: 13px;
   line-height: 15px;
   text-decoration: underline;
 }
-.nav-items{
+.nav-items {
   height: 85vh;
   overflow: hidden;
 }
-.nav-item{
+.nav-item {
   padding: 8px 16px;
   display: flex;
   align-items: center;
@@ -56,46 +63,47 @@
   opacity: 0.8;
   gap: 12px;
   font-size: 14px;
-  font-weight:500 ;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.1s linear;
 }
-.nav-item.selected{
-  background-color: rgba(255,255,255,0.1);
+.nav-item.selected {
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.nav-item.selected:hover{
-  background-color: rgba(255,255,255,0.05);
+.nav-item.selected:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
-.nav-item:hover{
-  background-color: rgba(48, 56, 79,0.5);
+.nav-item:hover {
+  background-color: rgba(48, 56, 79, 0.5);
 }
-.nav-item,.ni-text{
+.nav-item,
+.ni-text {
   display: flex;
 }
-.noti-circle{
+.noti-circle {
   width: 24px;
   height: 20px;
-  background-color: #EE741F;
+  background-color: #ee741f;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
-.nav-item-children{
+.nav-item-children {
   font-size: 13px;
   line-height: 16px;
-  font-weight:500 ;
+  font-weight: 500;
 }
-.nav-item-child{
+.nav-item-child {
   margin: 4px 0px 4px 48px;
   cursor: pointer;
   opacity: 0.8;
 }
-.nav-item-child.selected{
+.nav-item-child.selected {
   opacity: 1;
 }
-.nav-bottom{
+.nav-bottom {
   width: 100%;
   background-color: rgba(53, 60, 83);
   display: flex;
@@ -103,7 +111,7 @@
   padding: 6px 12px;
   border-radius: 4px;
 }
-.nb-icon{
+.nb-icon {
   width: 36px;
   height: 36px;
   padding: 8.2px 6.2px;
@@ -112,15 +120,83 @@
   border-radius: 4px;
   margin-right: 12px;
 }
-.nb-text{
+.nb-text {
   display: flex;
   flex-direction: column;
 }
-.nb-text.credits-header{
+.nb-text.credits-header {
   font-size: 13px;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
-.nb-text .credits{
+.nb-text .credits {
   font-size: 16px;
   font-weight: 500;
+}
+.top-bar {
+  display: flex;
+  width: 85vw;
+  align-items: center;
+  gap: 16px;
+  height: 64px;
+  padding: 12px 32px;
+  border-bottom: 1px solid #D9D9D9;
+}
+.tb-icon-wrapper {
+  background: #e6e6e6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tb-left {
+  display: flex;
+  width: 420px;
+  gap: 16px;
+}
+.tb-center {
+  width: 420px;
+  display: flex;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: px;
+}
+.search-box {
+  background-color: #f2f2f2;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.search-box:active{
+  outline: 0;
+  border: 0;
+}
+.tb-right {
+  display: flex;
+  width: 420px;
+  align-items: center;
+  justify-content: flex-end;
+  gap:12px
+}
+.page-title {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #1a181e;
+}
+.page-hint {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.7px;
+  color: #4d4d4d;
 }
