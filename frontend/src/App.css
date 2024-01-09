@@ -500,4 +500,31 @@ tr {
   .tf-left,.tf-right{
     display: none;
   }
+  .page-hint{
+    display: none;
+  }
+  .tb-right{
+    display: none;
+  }
+  .page{
+    gap:0;
+  }
+  .nb-text{
+    display: none;
+  }
+  .nav-bottom{
+    background-color:rgba(1, 1, 1, 0) ;
+  }
+  html{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .top-bar{
+    padding: 10px;
+    height: 45px;
+  }
+  th,tr,td{
+    font-size: 0.8rem;
+  }
 }
