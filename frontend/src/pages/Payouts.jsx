@@ -1,9 +1,54 @@
 import React from "react";
 import DropDown from "../components/DropDown";
 import DynamicIconRenderer from "../utils/DynamicIconRenderer";
+import TableItem from "../components/TableItem";
 
 export default function Payments() {
   const [currentRange, setCurrentRange] = React.useState("Last Month");
+  const orders = [
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+    {
+      orderId: "#281209",
+      orderDate: "7 July, 2023",
+      orderAmount: 1278.23,
+      transactionFee: 22,
+    },
+  ];
   return (
     <div className="page">
       <div className="header">
@@ -62,6 +107,16 @@ export default function Payments() {
               Transaction fees
               <DynamicIconRenderer itemName={"Info"} />
             </div>
+          </div>
+          <div className="table-items">
+            {orders.map((order, index) => {
+              return (
+                <TableItem
+                  key={index}
+                  data={order}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

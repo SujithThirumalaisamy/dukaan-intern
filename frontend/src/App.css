@@ -4,8 +4,6 @@
 .right {
   margin-left: 224px;
 }
-.left {
-}
 .sidebar {
   position: absolute;
   background-color: #1e2640;
@@ -42,13 +40,13 @@
   justify-content: space-between;
 }
 .sh-store-name {
-  width: 170px;
+  width: 110px;
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
 }
 .sh-store-link {
-  width: 170px;
+  width: 110px;
   font-size: 13px;
   line-height: 15px;
   text-decoration: underline;
@@ -142,6 +140,8 @@
   height: 64px;
   padding: 12px 32px;
   border-bottom: 1px solid #d9d9d9;
+  position: absolute;
+  background-color: #fff;
 }
 .tb-icon-wrapper {
   background: #e6e6e6;
@@ -203,13 +203,15 @@
   color: #4d4d4d;
 }
 .page {
-  width: 100%;
-  height: 100%;
+  width: 85vw;
+  max-height: calc(100vh - 64px);
   padding: 32px;
   background-color: #fafafa;
   gap: 32px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  margin-top: 64px;
 }
 .header {
   display: flex;
@@ -336,4 +338,18 @@
 }
 .th-icon {
   max-width: 14px;
+}
+.table-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 14px 12px;
+  align-items: center;
+  gap: 40px;
+  background: var(--Black-100, #fff);
+}
+.divider {
+  height: 2px;
+  background-color: #e6e6e6;
 }
