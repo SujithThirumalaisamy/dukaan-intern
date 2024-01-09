@@ -21,6 +21,7 @@ import QuestionIcon from "../assets/QuestionIcon";
 import SearchIcon from "../assets/SearchIcon";
 import SortIcon from "../assets/SortIcon";
 import InfoIcon from "../assets/InfoIcon";
+import DownloadIcon from "../assets/DownloadIcon";
 
 const iconMap = {
   Affiliates: AffiliatesIcon,
@@ -46,6 +47,7 @@ const iconMap = {
   Search: SearchIcon,
   Sort: SortIcon,
   Info: InfoIcon,
+  Download: DownloadIcon,
 };
 
 export default iconMap;

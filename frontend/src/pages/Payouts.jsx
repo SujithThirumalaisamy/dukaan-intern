@@ -1,7 +1,8 @@
 import React from "react";
 import DropDown from "../components/DropDown";
 import DynamicIconRenderer from "../utils/DynamicIconRenderer";
-import TableItem from "../components/TableItem";
+import ArrowLeftIcon from "../assets/ArrowLeftIcon";
+import ArrowRightIcon from "../assets/ArrowRightIcon";
 
 export default function Payments() {
   const [currentRange, setCurrentRange] = React.useState("Last Month");
@@ -91,32 +92,61 @@ export default function Payments() {
               </div>
               <div className="pbt-download">
                 <button className="btn">
-                  <DynamicIconRenderer itemName={"Sort"} />
+                  <DynamicIconRenderer itemName={"Download"} />
                 </button>
               </div>
             </div>
           </div>
-          <div className="table-header">
-            <div className="th-item">Order ID</div>
-            <div className="th-item">
-              Order date
-              <DynamicIconRenderer itemName={"DropDownTriangle"} />
+          <table className="table-auto payout-table">
+            <thead className="table-header">
+              <tr>
+                <th className="th-item">Order ID</th>
+                <th className="th-item">Order date</th>
+                <th className="th-item">Order amount</th>
+                <th className="th-item">Transaction fees</th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order) => {
+                return (
+                  <tr key={Math.random()}>
+                    <td className="ti orderID">{order.orderId}</td>
+                    <td className="ti orderDate">{order.orderDate}</td>
+                    <td className="ti orderAmount">₹{order.orderAmount}</td>
+                    <td className="ti trans-fee">₹{order.transactionFee}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <div className="table-footer">
+            <div className="tf-left">
+              <button>
+                <ArrowLeftIcon />
+                Previous
+              </button>
             </div>
-            <div className="th-item">Order amount</div>
-            <div className="th-item">
-              Transaction fees
-              <DynamicIconRenderer itemName={"Info"} />
+            <div className="tf-center">
+              <span className="pg-no">1</span>
+              <span className="pg-no">2</span>
+              <span className="pg-no">3</span>
+              <span className="pg-no active">4</span>
+              <span className="pg-no">5</span>
+              <span className="pg-no">6</span>
+              <span className="pg-no">7</span>
+              <span className="pg-no">8</span>
+              <span className="pg-no">9</span>
+              <span className="pg-no">10</span>
+              <span className="pg-no">11</span>
+              <span className="pg-no">12</span>
+              <span className="pg-no">13</span>
             </div>
-          </div>
-          <div className="table-items">
-            {orders.map((order, index) => {
-              return (
-                <TableItem
-                  key={index}
-                  data={order}
-                />
-              );
-            })}
+            <div className="tf-right">
+              <button>
+                Next
+                <ArrowRightIcon />
+              </button>
+            </div>
           </div>
         </div>
       </div>

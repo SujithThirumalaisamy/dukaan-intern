@@ -1,8 +1,10 @@
 .layout {
   display: flex;
+  width: 100vw;
 }
 .right {
   margin-left: 224px;
+  min-width: 100%;
 }
 .sidebar {
   position: absolute;
@@ -134,9 +136,9 @@
 }
 .top-bar {
   display: flex;
-  width: 85vw;
+  width: calc(100% - 224px);
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
   height: 64px;
   padding: 12px 32px;
   border-bottom: 1px solid #d9d9d9;
@@ -203,7 +205,7 @@
   color: #4d4d4d;
 }
 .page {
-  width: 85vw;
+  width: calc(100% - 224px);
   max-height: calc(100vh - 64px);
   padding: 32px;
   background-color: #fafafa;
@@ -211,6 +213,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin-top: 64px;
 }
 .header {
@@ -284,6 +287,7 @@
   justify-content: space-between;
 }
 .pb-table {
+  background-color: #fff;
   padding: 12px 12px 24px 12px;
   gap: 12px;
   display: flex;
@@ -321,35 +325,179 @@
   display: flex;
   gap: 12px;
 }
-.table-header {
-  display: flex;
-  min-width: 100%;
+.pb-table{
+  border-radius: 8px;
+}
+.table-header tr {
   padding: 10px 12px;
-  align-items: center;
-  gap: 40px;
-  justify-content: space-between;
-  border-radius: 4px;
-  background: var(--Black-95, #f2f2f2);
+  overflow: hidden;
+  border-radius: 10px;
 }
-.th-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.th-icon {
-  max-width: 14px;
-}
-.table-item {
-  display: flex;
-  justify-content: space-between;
+tr {
+  font-size: 16px;
   width: 100%;
   height: 48px;
-  padding: 14px 12px;
+}
+.orderID {
+  cursor: pointer;
+  font-weight: 500;
+  color: #146eb4;
+}
+tr .ti:nth-child(1),
+tr .ti:nth-child(2) {
+  text-align: left;
+}
+tr .ti:nth-child(3),
+tr .ti:nth-child(4) {
+  text-align: right;
+}
+th {
+  color: #4D4D4D;
+  background: var(--Black-95, #f2f2f2);
+}
+th:nth-child(1) {
+  border-radius: 8px 0px 0px 8px;
+}
+th:nth-child(4) {
+  border-radius: 0px 8px 8px 0px;
+}
+thead tr {
+  border-bottom: 0px;
+}
+td,
+th {
+  padding: 0px 12px;
+}
+th:nth-child(1),
+th:nth-child(2) {
+  text-align: left;
+}
+th:nth-child(3),
+th:nth-child(4) {
+  text-align: right;
+}
+.payout-table {
+  margin: 12px;
+}
+tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+.table-footer {
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-evenly;
+}
+.table-footer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  border: 1px solid var(--Black-85, #d9d9d9);
   background: var(--Black-100, #fff);
 }
-.divider {
-  height: 2px;
-  background-color: #e6e6e6;
+.table-footer .tf-left button {
+  padding: 6px 12px 6px 6px;
+}
+.table-footer .tf-right button {
+  padding: 6px 6px 6px 12px;
+}
+.pg-no.active {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  padding: 6px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  background: var(--Primary-Blue, #146eb4);
+  color: #ffffff;
+}
+.pg-no {
+  cursor: pointer;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  padding: 6px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+}
+.tf-center {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .ni-text {
+    display: none;
+    position: relative;
+  }
+  .sidebar {
+    width: 55px;
+    margin: 0;
+    padding: 0;
+  }
+  .sh-store {
+    display: none;
+  }
+  .noti-circle {
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+  }
+  .right {
+    margin-left: 55px;
+    width: calc(100vw - 55px);
+  }
+  .top-bar {
+    width: calc(100vw - 55px);
+  }
+  .page {
+    width: calc(100vw - 55px);
+  }
+}
+@media (max-width:745px) {
+  .page{
+    padding: 5px;;
+  }
+}
+@media (max-width:625px) {
+  .order-details{
+    flex-direction: column;
+    gap: 0;
+  }
+  .od-left,.od-right{
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    border-radius: 0;
+  }
+  .od-value{
+    font-size: 20px;
+  }
+  .payout-table{
+    margin: 0;
+  }
+  .pb-table{
+    padding: 0;
+  }
+  th,td{
+    margin: 0;
+    padding: 0;
+  }
+  th.th-item{
+    border-radius: 0px;
+  }
+  th{
+    text-wrap: wrap;
+  }
+  .tf-left,.tf-right{
+    display: none;
+  }
 }

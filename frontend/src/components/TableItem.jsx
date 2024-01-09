@@ -3,14 +3,11 @@ import React from 'react'
 export default function TableItem({data}) {
     const {orderId,orderDate,orderAmount, transactionFee} = data
   return (
-    <>
-    <div className='table-item'>
-        <div className="ti orderID">{orderId}</div>
-        <div className="ti orderDate">{orderDate}</div>
-        <div className="ti orderAmount">{orderAmount}</div>
-        <div className="ti trans-fee">{transactionFee}</div>
-    </div>
-    <div className="divider"></div>
-    </>
+    <tr className='table-item'>
+        <td className="ti orderID">{orderId}</td>
+        <td className="ti orderDate">{orderDate}</td>
+        <td className="ti orderAmount">{orderAmount}</td>
+        <td className="ti trans-fee">{transactionFee}</td>
+    </tr>
   )
 }
